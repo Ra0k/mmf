@@ -5,6 +5,7 @@ from .base_model import BaseModel
 from .pythia import Pythia
 from .ban import BAN
 from .lorra import LoRRA
+from .lorra2 import LoRRA2
 from .top_down_bottom_up import TopDownBottomUp
 from .butd import BUTD
 from .mmbt import MMBT, MMBTForClassification, MMBTForPreTraining
@@ -21,6 +22,7 @@ __all__ = [
     "TopDownBottomUp",
     "Pythia",
     "LoRRA",
+    "LoRRA2",
     "BAN",
     "BaseModel",
     "BUTD",
