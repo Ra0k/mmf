@@ -116,7 +116,9 @@ class LoRRA2(Pythia):
         return feature_embeddings, feature_attentions
 
     def forward(self, sample_list):
-        #print(sample_list, file=sys.stderr)
+        print(sample_list.image_info_0, file=sys.stderr)
+        
+        exit()
         
         sample_list.text = self.word_embedding(sample_list.text)
         text_embedding_total = self.process_text_embedding(sample_list)
