@@ -104,17 +104,6 @@ class TextVQADataset(MMFDataset):
         current_sample = self.add_sample_details(sample_info, current_sample)
         current_sample = self.add_answer_info(sample_info, current_sample)
 
-        # only the 'max_features' key is needed
-        # pop other keys to minimize data loading overhead
-        if hasattr(current_sample, "image_info_0"):
-            for k in list(current_sample.image_info_0):
-                if k != "max_features":
-                    current_sample.image_info_0.pop(k)
-        if hasattr(current_sample, "image_info_1"):
-            for k in list(current_sample.image_info_1):
-                if k != "max_features":
-                    current_sample.image_info_1.pop(k)
-
         return current_sample
 
     def add_sample_details(self, sample_info, sample):
