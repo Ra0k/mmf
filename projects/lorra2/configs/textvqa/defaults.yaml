@@ -5,8 +5,8 @@ dataset_config:
   textvqa:
     use_ocr: true
     use_order_vectors: true
-    return_features_info: true
     use_ocr_info: true
+    return_features_info: true
     processors:
       answer_processor:
         type: soft_copy_answer
@@ -33,6 +33,7 @@ evaluation:
   - vqa_accuracy
 
 training:
+  checkpoint_interval: 100
   clip_norm_mode: all
   clip_gradients: true
   max_grad_l2_norm: 0.25
@@ -45,7 +46,7 @@ training:
   warmup_iterations: 1000
   max_updates: 24000
   batch_size: 128
-  num_workers: 7
+  num_workers: 14
   task_size_proportional_sampling: true
   early_stop:
     criteria: textvqa/vqa_accuracy
