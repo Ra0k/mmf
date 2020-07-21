@@ -39,7 +39,7 @@ training:
   max_grad_l2_norm: 0.25
   lr_scheduler: true
   lr_steps:
-  - 14000
+  - 1000
   lr_ratio: 0.01
   use_warmup: true
   warmup_factor: 0.2
